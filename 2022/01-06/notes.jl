@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.17.5
+# v0.17.6
 
 using Markdown
 using InteractiveUtils
@@ -33,7 +33,7 @@ md"""
 * Some workarounds could be
   * auto disabling previous `x` definitions
   * auto-suggesting re-naming previous x
-  * using "chapter" namespaces https://github.com/fonsp/Pluto.jl/discussions/1799
+  * using "chapter" namespaces <https://github.com/fonsp/Pluto.jl/discussions/1799>
 """
 
 # ╔═╡ c8dd8e23-4da6-48d0-bc91-1fe94b37d73c
