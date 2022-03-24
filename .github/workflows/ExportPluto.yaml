@@ -5,6 +5,12 @@ on:
             - main
             - master
     workflow_dispatch:
+    schedule: 
+        - cron: "0 0 */5 * *" # to keep the cache fresh
+
+concurrency:
+    group: generate
+    cancel-in-progress: true
 
 jobs:
     build-and-deploy:
