@@ -41,8 +41,8 @@ md"""
   - Can try a repo for test notebooks, compare output from different versions
 - Currently running cell ID
   - How will changing the reactivity algo, package manager, etc. impact this?
-  - Can we make the random seed repoducible? Maybe use the module+cell ID as the seed.
-  - Nextjournal mamually enters a new number into their code to force a re-run, making the seed essentially a function of the AST
+  - Can we make the random seed reproducible? Maybe use the module+cell ID as the seed
+  - Nextjournal manually enters a new number into their code to force a re-run, making the seed essentially a function of the AST
 
 - Fons going to the Clojure conference in Berlin 💼
 """
@@ -53,10 +53,10 @@ md"""
 
 It's in the works! <https://plutojl-preview.netlify.app/>
 
-- Fronmatter information is baked directly into noteooks now, yay!
-- May want to take inspriation from [Pollen.jl](https://github.com/lorenzoh/Pollen.jl) for its improved HTML extensibility over other tools like Franklin.jl for example
+- Frontmatter information is baked directly into notebooks now, yay!
+- May want to take inspiration from [Pollen.jl](https://github.com/lorenzoh/Pollen.jl) for its improved HTML extensibility over other tools like Franklin.jl for example
 - That being said, there is a Franklin.jl rewrite in the works (XFranklin.jl) to keep an eye on
-- The pixel art characters that appear in Gerhard's  "Captain Bayes" [notebooks](https://captain-bayes.github.io/bayes-imoox/notebooks/starpath.html) are really cool. Adding the little Pluto penguin/platypus/blob mascots to our own sample notebooks in a similar way could be a nice touch!
+- The pixel art characters that appear in Gerhard's  "Captain Bayes" [notebooks](https://captain-bayes.github.io/bayes-imoox/notebooks/starpath.html) are really cool. Adding the little Pluto penguin/platypus/blob mascots to our own sample notebooks in a similar way could be fun!
 """
 
 # ╔═╡ 0897bff6-8756-4ac2-90e3-6ace90b1d38c
@@ -65,10 +65,10 @@ md"""
 
 Swag above everything
 
-- The vision is to have a hand-drawn free-form aesthetic for the Pluto t-shirts
+- The idea is to have a hand-drawn free-form aesthetic for the Pluto t-shirts
 - To that end, what if we made them ourselves with a screen printer!
 - May be able to rent space/equipment for this
-- In addition, embroidery could also be a nice touch to the t-shirts, or for patches and other swag for example
+- How about embroidery? Could be a nice touch to the t-shirts, or for patches and other swag
 """
 
 # ╔═╡ 532c3226-9cca-45ec-8785-e51e119fc852
