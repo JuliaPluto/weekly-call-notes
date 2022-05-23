@@ -13,10 +13,10 @@ using PlutoUI, MarkdownLiteral, Dates
 # ╔═╡ 052e62dc-bf15-4666-8333-a7420cc30934
 md"""
 # To discuss
-- GSOC ✅
-- [PlutoHooks.jl](https://github.com/JuliaPluto/PlutoHooks.jl) ✅
-- Website ✅
-- T-shirts ✅
+- fons: GSOC ✅
+- paul: [PlutoHooks.jl](https://github.com/JuliaPluto/PlutoHooks.jl) ✅
+- fons: Website ✅
+- fons: T-shirts ✅
 """
 
 # LETS TAKE A STEP BACK
@@ -45,6 +45,30 @@ md"""
   - Nextjournal mamually enters a new number into their code to force a re-run, making the seed essentially a function of the AST
 
 - Fons going to the Clojure conference in Berlin 💼
+"""
+
+# ╔═╡ e529f5ca-d0f6-4784-8b88-8ddffd4c324d
+md"""
+# Website
+
+It's in the works! <https://plutojl-preview.netlify.app/>
+
+- Fronmatter information is baked directly into noteooks now, yay!
+- May want to take inspriation from [Pollen.jl](https://github.com/lorenzoh/Pollen.jl) for its improved HTML extensibility over other tools like Franklin.jl for example
+- That being said, there is a Franklin.jl rewrite in the works (XFranklin.jl) to keep an eye on
+- The pixel art characters that appear in Gerhard's  "Captain Bayes" [notebooks](https://captain-bayes.github.io/bayes-imoox/notebooks/starpath.html) are really cool. Adding the little Pluto penguin/platypus/blob mascots to our own sample notebooks in a similar way could be a nice touch!
+"""
+
+# ╔═╡ 0897bff6-8756-4ac2-90e3-6ace90b1d38c
+md"""
+# T-shirts
+
+Swag above everything
+
+- The vision is to have a hand-drawn free-form aesthetic for the Pluto t-shirts
+- To that end, what if we made them ourselves with a screen printer!
+- May be able to rent space/equipment for this
+- In addition, embroidery could also be a nice touch to the t-shirts, or for patches and other swag for example
 """
 
 # ╔═╡ 532c3226-9cca-45ec-8785-e51e119fc852
@@ -304,10 +328,12 @@ uuid = "3f19e933-33d8-53b3-aaab-bd5110c3b7a0"
 """
 
 # ╔═╡ Cell order:
-# ╠═6b5d7d87-806c-470b-8a71-c0f441ed5d6d
+# ╟─6b5d7d87-806c-470b-8a71-c0f441ed5d6d
 # ╟─052e62dc-bf15-4666-8333-a7420cc30934
 # ╟─36d950c1-a23c-4aee-9fd6-35149a77eb4f
-# ╠═bb11affe-4725-4520-a97d-268321b8297d
+# ╟─bb11affe-4725-4520-a97d-268321b8297d
+# ╟─e529f5ca-d0f6-4784-8b88-8ddffd4c324d
+# ╟─0897bff6-8756-4ac2-90e3-6ace90b1d38c
 # ╠═532c3226-9cca-45ec-8785-e51e119fc852
 # ╠═c85f7e02-5bd5-4fb7-b279-d8297343a8b9
 # ╠═732d814a-49c7-4f96-8de7-431f1dcd4982
