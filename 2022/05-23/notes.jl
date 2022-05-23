@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.3
+# v0.19.5
 
 using Markdown
 using InteractiveUtils
@@ -13,131 +13,38 @@ using PlutoUI, MarkdownLiteral, Dates
 # ╔═╡ 052e62dc-bf15-4666-8333-a7420cc30934
 md"""
 # To discuss
-- gerhard: plutoevent next week ✅
-- rik: max methods ✅
-- rik: TTFX, Package compilation
-- rik: books from multiple notebooks
-- rik: do what `nodejs` does in function encaptulation of cells
-- fons: what is running right now? ✅
-- fons: overview of past & future TTFX improvements 
+- GSOC ✅
+- [PlutoHooks.jl](https://github.com/JuliaPluto/PlutoHooks.jl) ✅
+- Website ✅
+- T-shirts ✅
 """
 
 # LETS TAKE A STEP BACK
 
 # ╔═╡ 36d950c1-a23c-4aee-9fd6-35149a77eb4f
 md"""
-# Pluto Event next week!
+# GSOC
 
+We have two new students! Congrats to Sergio and binokingo 🎉
 
+- Sergio A. Vargas: [*An Alternative to Distributed for Pluto.jl*](https://summerofcode.withgoogle.com/programs/2022/projects/17rwe2D4)
+- bingokingo: [*Electron App for Pluto*](https://summerofcode.withgoogle.com/programs/2022/projects/w10mCFle)
 """
 
 # ╔═╡ bb11affe-4725-4520-a97d-268321b8297d
 md"""
-# `@max_methods`
+# PlutoHooks.jl
 
-[PR](https://github.com/fonsp/Pluto.jl/pull/2068)
+🐛 hunting. Possible sources:
 
-Example from julialang: [https://github.com/JuliaLang/julia/pull/43370#issuecomment-989186549](https://github.com/JuliaLang/julia/pull/43370#issuecomment-989186549)
+- Tests only for PlutoHooks.jl
+  - Can try a repo for test notebooks, compare output from different versions
+- Currently running cell ID
+  - How will changing the reactivity algo, package manager, etc. impact this?
+  - Can we make the random seed repoducible? Maybe use the module+cell ID as the seed.
+  - Nextjournal mamually enters a new number into their code to force a re-run, making the seed essentially a function of the AST
 
-Made Plots.jl TTFP go from 12s to 6s.
-
-
-We now set it for all of Pluto (but not PlutoRunner
-
-"""
-
-# ╔═╡ 63bdd84d-4389-4ed5-b88a-b890fd54efaa
-md"""
-# Testing of Pluto
-
-- Testing is pretty good! (backend)
-- Some things are weird on frontend (Cypress is good)
-- We've been good in adding backend tests for issues!
-
-"""
-
-# ╔═╡ e13a363a-14cc-4d13-ad6b-c087b62ba2ee
-0 + 4im # * Pull_Requests
-
-# ╔═╡ b371a705-ab0e-4ff6-987f-1d4c64a37c67
-md"""
-# Pluto feels slow
-
-Two things:
-- Julia is slow because:
-	- Super fast amortized for (function_calls → ∞)
-	- 1/superfast if (function_calls → 1)
-- Pluto workflow
-	- Server process launch
-	- Precompile, compile
-	- main menu (user input)
-	- start notebook process
-	- Pkg management stuff
-	- run things for the first time
-	- julia is slow on first time, pluto is always doing it for the first time!
-
-- Technical
-- *Perceived*, time is an illusion
-
-## Kinds of slownesses
-
-### The one you measure with a clock
-
-### The one that makes people have anxiety (See British Government accessibility guide)
-- Clicking a link and not knowing what happens
-- Back button destroying all your work
-
-## TODOs:
-
-- Be busy on IDLE time
-- Before we launch main menu, try update registry
-- Parallelize all tasks (julia is not 100% CPU!)
-- Do the pluto workflow asynchronously
-- Don't make it fast but add the UI elements that will soothe the user!
-- Prompt users to stretch while loading (because it's going to take a while)! (because we _care_ for you!)
-- FAKE NEW NOTEBOOK (and either remove it or use it on `new` click)
-- Intermediate page: `/new` can go to a `/new_waiting_for_notebook_id` that shows what is going on and _then_ redirects
-
-- When opening an existing notebook, all cells are queued (5 minutes for Plots, GR etc) 
-	- [Main Menu -> Viewing: 5 seconds]
-	- [Viewing 	 -> running (Julia compiling AND/OR Packages)]
-		-> So 
-
-## What should we do when we know that the user is waiting for something but nothing is happening?
-
-- Create a timeline (see at ant.design)
-- Show what is happening and whether we need user input
-- Packages installing → evaluate cells → julia precompile → usings → compile → run → user
-- if the current cell that is running has `using/import` then we can say 'precompile'
-- We can assign weights to cells: a for loop is big, an import is HUGE, `md`s are small
-- We can graphically show what is happening: e.g. Symbol for import/precompile
-- If `normal` code is slow, show specialized messages like "use `using ThreadsX.for`"?
-
-# Focusing on performance is nasty
-
-## How can we make progress bars more real?
-- we need data!
-- Database for every package and how much time it takes to precompile
-- Compare compilation time to a reference time (e.g. 10% of Plots or 5X dataframes)
-- Use pluto analytics for that?
-- Can you query if the packages you need are precompiled or not?
-- Precompiling depends on what is already precompiled
-
-## Loading bars
-- Not enough
-- Not real (some are fake 🥺: Fake loading bars are not soothing 🥺)
-- Maybe ant.design.timeline?
-- Static animation (see progress-indicators at Material design)
-
-♥️💕Tim Holy💞
-
-## 
-
-"""
-
-# ╔═╡ f08756a1-3571-4bb2-bac7-2b1d757f31f7
-md"""
-- Should the live docs be more prominent?
+- Fons going to the Clojure conference in Berlin 💼
 """
 
 # ╔═╡ 532c3226-9cca-45ec-8785-e51e119fc852
@@ -397,14 +304,10 @@ uuid = "3f19e933-33d8-53b3-aaab-bd5110c3b7a0"
 """
 
 # ╔═╡ Cell order:
-# ╟─6b5d7d87-806c-470b-8a71-c0f441ed5d6d
+# ╠═6b5d7d87-806c-470b-8a71-c0f441ed5d6d
 # ╟─052e62dc-bf15-4666-8333-a7420cc30934
 # ╟─36d950c1-a23c-4aee-9fd6-35149a77eb4f
-# ╟─bb11affe-4725-4520-a97d-268321b8297d
-# ╟─63bdd84d-4389-4ed5-b88a-b890fd54efaa
-# ╠═e13a363a-14cc-4d13-ad6b-c087b62ba2ee
-# ╟─b371a705-ab0e-4ff6-987f-1d4c64a37c67
-# ╟─f08756a1-3571-4bb2-bac7-2b1d757f31f7
+# ╠═bb11affe-4725-4520-a97d-268321b8297d
 # ╠═532c3226-9cca-45ec-8785-e51e119fc852
 # ╠═c85f7e02-5bd5-4fb7-b279-d8297343a8b9
 # ╠═732d814a-49c7-4f96-8de7-431f1dcd4982
