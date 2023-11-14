@@ -128,8 +128,39 @@ Some awesome new progress!!
 - [https://tshort.github.io/WebAssemblyCompiler.jl/stable/examples/observables/](https://tshort.github.io/WebAssemblyCompiler.jl/stable/examples/observables/) demo from Tom Short (WebAssemblyCompiler.jl) with Makie compiled!
 """
 
-# ╔═╡ 9b6d2582-c606-4c70-aa51-75d734c0a2f2
+# ╔═╡ cf4cda9b-6a12-4a5a-a918-68771e2e5c2f
+md"""
+## Julia - JS link
+"""
 
+# ╔═╡ 9b6d2582-c606-4c70-aa51-75d734c0a2f2
+function Base.show(io::IO, m::MIME"text/html", mytype::MyType)
+
+
+
+	# this returns a magical object that you can interpolate into a HTL <script> tag (the same return type as `AbstractPlutoDingetjes.published_to_js(x)`)
+	the_link = AbstractPlutoDingetjes.with_link(io) do message_from_js
+		@info "i should be visible"
+		println("i dont care about this one")
+
+		if rand() < .1
+			error("you should see me somewhere")
+		end
+		
+		return response_to_js
+	end
+
+
+	Base.show(io, m, @htl("""
+	<script>
+		let data = $(AbstractPlutoDingetjes.published_to_js(initial_data))
+		let link_with_julia = $(the_link)
+
+		let button = document.add
+	</script>
+	
+	"""))
+end
 
 # ╔═╡ Cell order:
 # ╟─baa74dae-8310-11ee-2cf6-991058ef3377
@@ -141,4 +172,5 @@ Some awesome new progress!!
 # ╟─50f8d760-c2bd-49c7-bb36-c7277715cafc
 # ╟─6559c44e-8cc2-4c0d-b9cf-aace490dceb7
 # ╟─d344fa0a-9fbc-45b8-8dee-7ddf1b1822b3
+# ╟─cf4cda9b-6a12-4a5a-a918-68771e2e5c2f
 # ╠═9b6d2582-c606-4c70-aa51-75d734c0a2f2
